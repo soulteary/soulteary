@@ -18,10 +18,10 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Generate stats card
-        uses:  soulteary/github-readme-stats-action@v1
+        uses:  soulteary/github-readme-stats-action@4591ae293d27995fd258b4ec253a7311cb2522b4 # v1.3.0
         with:
           card: stats
           options: username=${{ github.repository_owner }}&theme=gruvbox&show_icons=true&cache_seconds=7200&hide=prs,issues
@@ -29,7 +29,7 @@ jobs:
           token: ${{ secrets.STATS_TOKEN }}
 
       - name: Generate trophy card
-        uses: soulteary/github-profile-trophy-action@v1
+        uses: soulteary/github-profile-trophy-action@125fa2a58eb7feac88ee09c9fd4acad45c7c6987 # v1.3.0
         with:
           options: 'username=${{ github.repository_owner }}&theme=gruvbox&column=7&margin-w=15&margin-h=15&title=AllSuperRank,MultiLanguage,Stars,Commits,Follower,Issues,PullRequest&show_icons=true'
           path: .github/profile/trophy.svg
